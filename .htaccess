@@ -1,0 +1,5 @@
+<IfModule mod_rewrite.c>
+	RewriteEngine on
+    Rewritecond %{REQUEST_FILENAME} !-f
+    RewriteRule ^(.*)$ index.php?_url=/api/$1 [QSA,L]
+</IfModule>
